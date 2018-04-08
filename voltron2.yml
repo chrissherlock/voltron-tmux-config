@@ -1,0 +1,15 @@
+# ~/.tmuxinator/voltron2.yml
+
+name: voltron2
+root: ~/lo/core
+
+startup_window: editor
+startup_pane: 0
+
+windows:
+  - editor:
+      layout: 9eec,169x52,0,0[169x16,0,0{84x16,0,0,0,84x16,85,0,3},169x35,0,17,1]
+      panes:
+        - make CppunitTest_sw_htmlexport CPPUNITTRACE="lldb --"
+        - voltron view command 'frame variable'
+        - voltron view command 'source list -a $rip -c 31' --lexer c
