@@ -11,5 +11,5 @@ windows:
       layout: 9eec,169x52,0,0[169x16,0,0{84x16,0,0,0,84x16,85,0,3},169x35,0,17,1]
       panes:
         - make CppunitTest_sw_htmlexport CPPUNITTRACE="lldb --"
-        - voltron view command 'frame variable'
+        - voltron view command 'frame variable' --lexer c
         - voltron view command 'source list -a $rip -c 31' --lexer c
